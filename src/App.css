@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
+.outer-box {
   height: 40vmin;
-  pointer-events: none;
+  margin: 1%;
+  font-weight: bold;
+  padding: 1%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search {
+  padding: 0.5%;
+  margin: 1%;
+  width: 21%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown {
+  background-color: rgb(205, 205, 205);
+  padding: 1%;
+  margin: 1%;
+  margin-left: 65px;
+  border: none;
+  width: 18%;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* to remove the arrow in drop down*/
+}
+
+
+.radio-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Display radio buttons vertically */
 }
 
-.App-link {
-  color: #61dafb;
+.radio-label {
+  margin-bottom: 8px;
+  background-color: rgb(205, 205, 205);
+  padding: 1%;
+  margin: 1%;
+  margin-left: 85px;
+  border: none;
+  width: 14%;
+  text-align: left;
+  font-size: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.radio-container-1 {
+  display: flex;
+  flex-direction: column;
+  /* Display radio buttons vertically */
+}
+
+.radio-label-1 {
+  margin-bottom: 8px;
+  background-color: rgb(205, 205, 205);
+  /* Change to your desired background color */
+  padding: 1%;
+  margin: 1%;
+  margin-left: 110px;
+  border: none;
+  width: 12%;
+  text-align: left;
+  font-size: 70%;
+}
+
+.square-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background-color: white;
+}
+
+.square-radio::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  display: none;
+}
+
+.square-radio:checked::before {
+  display: block;
 }
